@@ -153,6 +153,7 @@
 		E8CDD5E41AE101B9007B0AAB /* GlobalObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDD5E21AE101B9007B0AAB /* GlobalObject.m */; };
 		E8CDD5E81AE10202007B0AAB /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDD5E71AE10202007B0AAB /* UIViewExt.m */; };
 		E8CDD5EB1AE10285007B0AAB /* LPTextSizeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDD5EA1AE10285007B0AAB /* LPTextSizeHelper.m */; };
+		E8CDD5ED1AE10ED4007B0AAB /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = E8CDD5EC1AE10ED4007B0AAB /* cover.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -323,6 +324,7 @@
 		E8CDD5E71AE10202007B0AAB /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
 		E8CDD5E91AE10285007B0AAB /* LPTextSizeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTextSizeHelper.h; sourceTree = "<group>"; };
 		E8CDD5EA1AE10285007B0AAB /* LPTextSizeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTextSizeHelper.m; sourceTree = "<group>"; };
+		E8CDD5EC1AE10ED4007B0AAB /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +393,7 @@
 		E8CDD4A51AE10020007B0AAB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E8CDD5EC1AE10ED4007B0AAB /* cover.png */,
 				E8CDD4A61AE10020007B0AAB /* Info.plist */,
 				E8CDD4A71AE10020007B0AAB /* main.m */,
 			);
@@ -701,6 +704,7 @@
 				E8CDD55E1AE10130007B0AAB /* dfy.png in Resources */,
 				E8CDD5A51AE10130007B0AAB /* ecw@2x.gif in Resources */,
 				E8CDD5D31AE10130007B0AAB /* eez@2x.gif in Resources */,
+				E8CDD5ED1AE10ED4007B0AAB /* cover.png in Resources */,
 				E8CDD5DB1AE1013F007B0AAB /* faceList.plist in Resources */,
 				E8CDD5C11AE10130007B0AAB /* eeg@2x.gif in Resources */,
 				E8CDD57D1AE10130007B0AAB /* ebx@2x.gif in Resources */,
