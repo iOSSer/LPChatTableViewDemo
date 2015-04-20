@@ -11,7 +11,7 @@
 @implementation ACChatTableViewCell
 
 static CGFloat avatarWidth = 34;
-static CGFloat cellDefaultHeight = 113;
+//static CGFloat cellDefaultHeight = 113;
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -188,8 +188,8 @@ static CGFloat cellDefaultHeight = 113;
 {
     _helper = helper;
     
-    CGFloat maxWidth = self.bounds.size.width - (10 * 2 + avatarWidth * 2);
-//    
+//    CGFloat maxWidth = self.bounds.size.width - (10 * 2 + avatarWidth * 2);
+//
 //    if (!_bubbleImageView) {
 //        self.bubbleImageView = [[UIImageView alloc] init];
 //        self.bubbleImageView.frame = CGRectMake(self.avatarImageView.right + 5, 0, maxWidth, 0);
@@ -222,6 +222,7 @@ static CGFloat cellDefaultHeight = 113;
 //    _contentTextView.frame = _bubbleImageView.bounds;
 //    _contentTextView.left = 5;
     NSDictionary *dicMessage = helper.messageObject;
+    _contentTextView.attributedText = [dicMessage objectForKey:@"msgContent"];
 //    NSString *text = [dicMessage objectForKey:@"msgContent"];
 //    _contentTextView.attributedText = [GlobalObject attributedStringWithText:text];
 ////    _contentTextView.text = text;
@@ -229,14 +230,15 @@ static CGFloat cellDefaultHeight = 113;
     //[[NSAttributedString alloc] initWithString:text attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14.f]}]
 //    CGFloat maxWidth = self.bounds.size.width - (10 * 2 + avatarWidth * 2);
     _bubbleImageView.left = 53;
-    _bubbleImageView.width = _helper.contentSize.width;
+    _bubbleImageView.width = _helper.contentSize.width + 5;
     _contentTextView.width = _helper.contentSize.width;
 //    _contentTextView.width = maxWidth;
 //
+//    _contentTextView.backgroundColor = [UIColor orangeColor];
 
     _bubbleImageView.height = _helper.contentSize.height;
     _contentTextView.height = _bubbleImageView.height;
-    _contentTextView.attributedText = [GlobalObject attributedStringWithText:dicMessage[@"msgContent"]];
+//    _contentTextView.attributedText = [GlobalObject attributedStringWithText:dicMessage[@"msgContent"]];
     UIImage *bubbleImage = [UIImage imageNamed:@"bubble_left"];
     _bubbleImageView.image = [self resizableImage:bubbleImage];
 }

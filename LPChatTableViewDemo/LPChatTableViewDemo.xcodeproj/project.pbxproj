@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E8CBF8B41AE49F5F000293BA /* bubble_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E8CBF8B31AE49F5F000293BA /* bubble_left@2x.png */; };
 		E8CDD4A81AE10020007B0AAB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDD4A71AE10020007B0AAB /* main.m */; };
 		E8CDD4AB1AE10020007B0AAB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CDD4AA1AE10020007B0AAB /* AppDelegate.m */; };
 		E8CDD4AE1AE10020007B0AAB /* LPChatTableViewDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E8CDD4AC1AE10020007B0AAB /* LPChatTableViewDemo.xcdatamodeld */; };
@@ -167,6 +168,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E8CBF8B31AE49F5F000293BA /* bubble_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble_left@2x.png"; sourceTree = "<group>"; };
 		E8CDD4A21AE10020007B0AAB /* LPChatTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LPChatTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CDD4A61AE10020007B0AAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8CDD4A71AE10020007B0AAB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -366,6 +368,7 @@
 		E8CDD4A41AE10020007B0AAB /* LPChatTableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E8CBF8B31AE49F5F000293BA /* bubble_left@2x.png */,
 				E8CDD4A91AE10020007B0AAB /* AppDelegate.h */,
 				E8CDD4AA1AE10020007B0AAB /* AppDelegate.m */,
 				E8CDD4AF1AE10020007B0AAB /* MasterViewController.h */,
@@ -744,6 +747,7 @@
 				E8CDD5B91AE10130007B0AAB /* edn@2x.gif in Resources */,
 				E8CDD58D1AE10130007B0AAB /* ech@2x.gif in Resources */,
 				E8CDD5911AE10130007B0AAB /* ecj@2x.gif in Resources */,
+				E8CBF8B41AE49F5F000293BA /* bubble_left@2x.png in Resources */,
 				E8CDD5711AE10130007B0AAB /* ebr@2x.gif in Resources */,
 				E8CDD5A21AE10130007B0AAB /* ecv.png in Resources */,
 				E8CDD5811AE10130007B0AAB /* ecb@2x.gif in Resources */,
@@ -1004,6 +1008,7 @@
 				E8CDD4CD1AE10020007B0AAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8CDD4CE1AE10020007B0AAB /* Build configuration list for PBXNativeTarget "LPChatTableViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -1012,6 +1017,7 @@
 				E8CDD4D01AE10020007B0AAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

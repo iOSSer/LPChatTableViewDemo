@@ -10,7 +10,6 @@
 #import "LPTextSizeHelper.h"
 #import "ACChatTableViewCell.h"
 
-
 @interface DetailViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -31,18 +30,24 @@ static NSString *reuseIdentifier = @"Chat";
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    
+    self.navigationController.hidesBarsOnSwipe = YES;
     [_tableView registerClass:[ACChatTableViewCell class] forCellReuseIdentifier:reuseIdentifier];
+    
+    UIView *backgroundView = [UIView new];
+    backgroundView.backgroundColor = [UIColor lightGrayColor];
+    _tableView.backgroundView = backgroundView;
     
     [self.view addSubview:_tableView];
     
     _messages = [NSMutableArray arrayWithCapacity:3];
-    NSString *message = @"[开心][ss][^_^]【😄】】哦啊我今儿啊呜沙发上放假哦啊局外人温柔wrwqgvbarbASegasf 恐怕是发[开心][ss][^_^]【😄】】哦啊我今儿啊呜沙发上放假哦啊局外人温柔wrwqgvbarbASegasf 恐怕是发[开心][ss][^_^]【😄】】哦啊我今儿啊呜沙发上放假哦啊局外人温柔wrwqgvbarbASegasf 恐怕是发[开心][ss][^_^]【😄】】哦啊我今儿啊呜沙发上放假哦啊局外人温柔wrwqgvbarbASegasf 恐怕是发a [开心][ss][^_^]【😄】v[开心][ss][^_^]【😄】[开心][ss][^_^]【😄】jgj1124 [爱你][ss][敲头]😄哦恐[大兵]wrwqgvbarbASegasfwrwqgvbarbASegasfwrwqgvbarbASegasf放假哦啊局外\n[开心][ss][^_^]【😄】jgjs";
-    for (int i = 0; i < 9; i ++) {
-        NSDictionary *dicMessage = @{@"msgType":[NSNumber numberWithInteger:1], @"isMe":[NSNumber numberWithInteger:0], @"msgContent":(i % 2 == 0 ? @"[爱你][ss][敲头]😄哦恐[大兵] [爱你][ss][敲头]😄哦恐[大兵]wrwqgvbarbASegasfwrwqgvbarbASegasfwrwqgvbarbASegasf放假哦啊局外\n[开心][ss][^_^]【😄】jgjs[爱你][ss][敲头]😄哦恐[大兵]wrwqgvbarbASegasfwrwqgvbarbASegasfwrwqgvbarbASegasf放假哦啊局外\n[开心][ss][^_^]【😄】jgjsgasfwrwqgvbarbASegasfwrwqgvbarbASegasf放假哦啊局外\n[开心][ss][^_^]【😄】jgjs[爱你][ss][敲头]😄哦恐[大兵]wrwqgvbarbASegasfwrwqgvbarbASegasfwrwqgvbarbASegasf放假哦啊局外\n[开心][ss][^_^]【😄】jgjs去1 [爱你][ss][敲头]😄哦恐[大兵] [爱你][ss][敲头]😄哦恐[大兵]wrwqgvbarbASegasfwrwqgvbarbASegasfwrwqgvbarbASegasf放假哦啊局外\n[开心][ss][^_^]【😄】jgjs[爱你][ss][敲头]😄哦恐[大兵]wrwqgvbarbASegasfwrwqgvbarbASegasfwrwqgvbarbASegasf放假哦啊局外\n[开心][ss][^_^]【😄】jgjsgasfwrwqgvbarbASegasfwrwqgvbarbASegasf放假哦啊局外\n[开心][ss][^_^]【😄】jgjs[爱你][ss][敲头]😄哦恐[大兵]wrwqgvbarbASegasfwrwqgvbarbASegasfwrwqgvbarbASegasf放假哦啊局外\n[开心][ss][^_^]【😄】jgjs去1 YYYYY" : message)};
+//     NSString *message = @"开心";
+    NSString *message = @"[开心][ss][^_^]【😄】】哦啊我今儿啊呜沙发上放假哦啊局外人温柔wrwqgvbarbASegasf 恐怕是发[开心][ss][^_^]【😄】】哦啊我今儿啊呜沙发上放假哦啊局外人温柔wrwqgvbarbASegasf 恐怕是发[开心][ss][^_^]【😄】】哦啊我今儿啊呜沙发上放假哦啊局外人温柔wrwqgvbarbASegasf 恐怕是发[开心][ss][^_^]【😄】】哦啊我今儿啊呜沙发上放假哦啊局外人温柔wrwqgvbarbASegasf 恐怕是发a [开心][ss][^_^]【😄】v[开心][ss][^_^]【😄】[开心][ss][^_^]【😄】jgj1124 [爱你][ss][敲头]😄哦恐[大兵]wrwqgvbarbASegasfwrwqgvbarbASegasfwrwqgvbarbASegasf放假哦啊局外\n[开心][ss][^_^]【😄】jgjs[开心][ss][^_^]【😄】】哦啊我今儿啊呜沙发上放假哦啊局外人温柔wrwqgvbarbASegasf 恐怕是发[开心][ss][^_^]【😄】】哦啊我今儿啊呜沙发上放假哦啊局外人温柔wrwqgvbarbASegasf 恐怕是发[开心][ss][^_^]【😄】】哦啊我今儿啊呜沙发上放假哦啊局外人温柔wrwqgvbarbASegasf 恐怕是发[开心][ss][^_^]【😄】】哦啊我今儿啊呜沙发上放假哦啊局外人温柔wrwqgvbarbASegasf 恐怕是发a [开心][ss][^_^]【😄】v[开心][ss][^_^]【😄】[开心][ss][^_^]【😄】jgj1124 [爱你][ss][敲头]😄哦恐[大兵]wrwqgvbarbASegasfwrwqgvbarbASegasfwrwqgvbarbASegasf放假哦啊局外\n[开心][ss][^_^]【😄】jgjs for (int i = 0; i < 9; i ++) {NSDictionary *dicMessage = @{msgType:[NSNumber numberWithInteger:1], @isMe:[NSNumber numberWithInteger:0], @msgContent:message};LPTextSizeHelper *helper = [[LPTextSizeHelper alloc] init];[helper setMessageObject:dicMessage];//        cellHelper.textView = textview;[_messages addObject:helper];}";
+    for (int i = 0; i < 199; i ++) {
+        NSAttributedString *att = [GlobalObject attributedStringWithText:message];
+        NSDictionary *dicMessage = @{@"msgType":[NSNumber numberWithInteger:1], @"isMe":[NSNumber numberWithInteger:0], @"msgContent":att};
         LPTextSizeHelper *helper = [[LPTextSizeHelper alloc] init];
         [helper setMessageObject:dicMessage];
-        //        cellHelper.textView = textview;
+//        //        cellHelper.textView = textview;
         [_messages addObject:helper];
     }
 }
@@ -61,7 +66,7 @@ static NSString *reuseIdentifier = @"Chat";
 {
     LPTextSizeHelper *helper = [_messages objectAtIndex:indexPath.row];
     
-    return helper.contentSize.height + 40;
+    return helper.contentSize.height;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
